@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> line drawing with mouse </title>
+</head>
+<body onmousedown="start();" onmousemove="draw();" onmouseup="stop();">
+<canvas id="myCanvas" width="400" height="400" style="border-style: solid;"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  var stopped = true;
+
+  function start() {
+      e = window.event;
+      myContext.moveTo(e.clientX-10, e.clientY-10);
+      stopped = false;
+  }
+
+  function stop() {
+      stopped = true;
+  }
+
+  function draw() {
+      if (!stopped) {
+          e = window.event;
+          myContext.lineTo(e.clientX-10, e.clientY-10);
+          myContext.stroke();
+      }
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    
+  <title>heateck text</title>  
+    
+</head>
+
+<body>
+    
+    <canvas id="canvas" width="800" height="800"></canvas>
+    
+    <script>
+    
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+        
+    context.font = "italic small-caps bold 50px 궁서체";
+    context.fillStyle = "red";
+    context.fillText("안녕하세요!!!", 10, 50);
+    
+    context.strokeStyle = "blue";
+    context.strokeText("반갑습니다!!!", 10,150);
+    
+    context.fillText(context.measureText("나는김희택이다").width, 10,250);
+        
+   // context.measureText("나는김희택이다").width;
+   // console.log(test); // F12 콘솔창으로 확인!!
+    
+    </script>
+    
+    
+    
+</body>
+
+
+</html>

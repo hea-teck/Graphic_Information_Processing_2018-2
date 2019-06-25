@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<!-- Canvas 그림그리기 예제 (line) -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> line drawing </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="300" height="200"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  myContext.moveTo(50, 50);
+  myContext.lineTo(200, 50);
+  myContext.lineTo(200, 100);
+  myContext.lineTo(100, 100);
+  myContext.lineTo(50, 150);
+  myContext.lineTo(150, 180);
+  myContext.stroke();
+</script>
+
+</body>
+</html>

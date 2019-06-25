@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<!-- Data URL Example -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> Canvas Data URL </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="200"></canvas>
+<img id="canvasImage" /> <!--오른쪽이미지-->
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  myContext.rect(0, 0, 400, 200);
+  myContext.fillStyle = "grey";
+  myContext.fill();
+
+  var text1 = "HTML5 Text Drawing!";
+
+  myContext.font = "24pt Tahoma";
+  myContext.fillStyle = "red";
+  myContext.fillText(text1, 50, 50);
+
+  myContext.lineWidth = 1;
+  myContext.font = "32pt San Serif";
+  myContext.strokeStyle = "blue";
+  myContext.strokeText("lineWidth=1", 100, 150);
+
+  // Canvas 이미지를 data URL로 저장한다. 기본 형식은 PNG 포맷이다. 
+  var dataURL = canvas.toDataURL();
+ 
+  // dataURL을 "canvasImage" 엘리먼트의 src 속성으로 지정하여
+  // 마우스 오른쪽 버튼을 이용하여 PNG file로 저장될 수 있도록 한다.
+  document.getElementById("canvasImage").src = dataURL;
+</script>
+
+
+</body>
+</html>

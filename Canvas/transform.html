@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<!-- Canvas 변환 예제 -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> Canvas Transformation </title>
+</head>
+<body>
+<canvas id="myCanvas" width="2000" height="2000"></canvas>
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  var imgObj = new Image();
+  imgObj.src = "clownfish.jpg";
+
+  imgObj.onload = function() {
+    // original drawing
+    myContext.drawImage(imgObj, 50, 50);
+      
+
+    // 이동변환
+    myContext.translate(300, 50); // (350, 50) 이동
+    myContext.drawImage(imgObj, 50, 50);
+
+    // 크기변환
+    myContext.setTransform(1, 0, 0, 1, 0, 0);
+    myContext.scale(1, -1); // 가로 1.2, 세로 1/3배 스케일
+    myContext.drawImage(imgObj, 40, 800);
+
+    // 회전변환
+    myContext.setTransform(1, 0, 0, 1, 0, 0);
+    myContext.translate(750, 0);
+    myContext.rotate(Math.PI/4);
+    myContext.drawImage(imgObj, 0, 0);
+  }
+</script>
+</body>
+</html>

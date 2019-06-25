@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>heateck test</title>
+</head>
+
+<body>
+    
+    <p> 사용된 이미지 </p>
+    <img src="abc.JPG" id="img">
+        
+    <canvas id="canvas" height="800" width="800"></canvas>
+    
+    <script>
+    
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        
+        var image = document.getElementById("img");
+        var pat = context.createPattern(image,"repeat");
+        //var pat = context.createPattern(image,"no-repeat");
+        //var pat = context.createPattern(image,"repeat-x");
+        //var pat = context.createPattern(image,"repeat-y");
+
+        context.rect(0,0,140,140);
+        context.fillStyle=pat;
+        context.fill();
+    
+    
+    </script>
+    
+    
+</body>
+</html>

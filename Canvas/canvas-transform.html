@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>heatecek test</title>
+    
+</head>
+    
+    
+<body>
+    
+    <canvas id="canvas" width="800" height="800"></canvas>
+    
+    <script>
+    
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+        
+    context.strokeStyle="blue";
+    context.strokeRect(100,20,20,20);
+   context.scale(2,2); //객체의 기준점에서 가로 세로를 2배씩하는 거임 동시에 크기를 늘린다. 시작위치를 옮긴다고 생각하면 될듯?
+    context.translate(10,10); //상대좌표
+    context.rotate(20*Math.PI/180);
+    context.strokeRect(100,20,20,20);//scale한 것보다 작으면 무시되고 scale한 것 보다 크면 설정한 크기대로 그려진다!!!지금 상황은 20,20이 scale한 크기보다 작으므로 무시된 것임!! 
+        
+        
+    </script>
+    
+    
+</body>
+
+</html>

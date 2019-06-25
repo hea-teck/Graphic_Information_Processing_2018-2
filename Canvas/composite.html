@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> Composition </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="120" height="120"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  myContext.beginPath();
+  myContext.rect(40, 10, 60, 100);
+  myContext.closePath();
+  myContext.stroke();
+  myContext.clip();
+
+  myContext.beginPath();
+  myContext.rect(20, 20, 60, 60);
+  myContext.fillStyle = "green";
+  myContext.shadowColor = "blue";
+  myContext.shadowBlur = 30;
+  myContext.shadowOffsetX = 10;
+  myContext.shadowOffsetY = 20;
+  myContext.closePath();
+  myContext.fill();
+
+  myContext.beginPath();
+  myContext.arc(80, 30, 30, 0, 2*Math.PI);
+  myContext.fillStyle = "red";
+  myContext.globalAlpha = 0.5;
+  myContext.shadowColor = "transparent";
+  myContext.fill();
+</script>
+
+</body>
+</html>

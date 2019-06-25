@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<!-- Data URL Example -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> Shape Decoration 1 </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="150" height="120"></canvas>
+<img id="canvasImage" />
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  myContext.beginPath();
+  myContext.moveTo(10, 20);
+  myContext.lineTo(100,20);
+  myContext.lineWidth = 20;
+  myContext.strokeStyle = "blue";
+  myContext.lineCap = "butt";
+  myContext.stroke();
+
+  myContext.beginPath();
+  myContext.moveTo(10, 60);
+  myContext.lineTo(100, 60);
+  myContext.strokeStyle = "red";
+  myContext.lineCap = "round";
+  myContext.stroke();
+
+  myContext.beginPath();
+  myContext.moveTo(10, 100);
+  myContext.lineTo(100, 100);
+  myContext.strokeStyle = "green";
+  myContext.lineCap = "square";
+  myContext.stroke();
+</script>
+
+
+</body>
+</html>
+
+
+

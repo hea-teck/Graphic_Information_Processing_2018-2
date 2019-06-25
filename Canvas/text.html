@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<!-- Canvas 텍스트 그려 넣기 예제 -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> Canvas Text Drawings </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  myContext.rect(0, 0, 400, 300);
+  myContext.stroke();
+
+  var text1 = "HTML5 Text Drawing!";
+  var text2 = "Left aligned text";
+  var text3 = "Center aligned text";
+  var text4 = "Right aligned text";
+
+  myContext.font = "italic 16pt Times New Roman";
+  myContext.fillStyle = "blue";  
+  myContext.fillText(text1, 200, 50);
+
+  myContext.font = "12pt Tahoma";
+  myContext.fillStyle = "red";  
+  myContext.textAlign = "left";
+  myContext.fillText(text2, 200, 100);
+
+  myContext.font = "bold 24pt Courier New";
+  myContext.strokeStyle = "black";
+  myContext.textAlign = "center";
+  myContext.lineWidth = 1;
+  myContext.strokeText(text3, 200, 150);
+  myContext.lineWidth = 2;
+  myContext.strokeText("lineWidth=2", 200, 200);
+
+  myContext.font = "bold 16pt Batang";
+  myContext.fillStyle = "green";  
+  myContext.textAlign = "right";
+  myContext.fillText(text4, 200, 250);
+</script>
+
+
+</body>
+</html>

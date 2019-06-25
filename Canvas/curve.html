@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<!-- Canvas 그림그리기 예제 -->
+<html>
+<head>
+<meta charset="utf-8"/> 
+<title> curve drawing </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="500" height="250"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var myContext = canvas.getContext("2d");
+
+  /*myContext.moveTo(50, 200);
+  myContext.quadraticCurveTo(100, 10, 200, 200);
+
+  myContext.stroke();*/
+
+  myContext.moveTo(100, 100);
+  myContext.bezierCurveTo(400, 800, 800, 200, 1300,800);
+
+  myContext.stroke();
+</script>
+
+
+</body>
+</html>
