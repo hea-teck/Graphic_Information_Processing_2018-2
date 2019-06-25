@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+    
+        <title>Assignment</title>
+        
+    </head>
+
+    <body>
+    
+      <canvas id="canvas" width="1500" height="1500"></canvas>
+        
+        <script>
+        
+            var canvas = document.getElementById("canvas");
+            var obj = canvas.getContext("2d");   
+            
+            var text1 = "heateck";
+            
+            obj.font="bold 20pt Courier New";
+            obj.strokeStyle="black";
+            obj.fillText("made by huiteak",430,780);         
+            //텍스트 작성           
+            
+            obj.beginPath()
+            obj.moveTo(520,620);
+            obj.lineTo(580,620);
+            obj.lineTo(580,640);
+            obj.quadraticCurveTo(550,660,520,640);
+            obj.lineWidth="2";
+            obj.fillStyle="#FEE9E4";
+            obj.fill();
+            obj.closePath();
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(513,640);
+            obj.lineTo(430,660);
+            obj.lineTo(430,740);
+            obj.lineTo(670,740);
+            obj.lineTo(670,660);
+            obj.lineTo(587,640);
+            obj.fillStyle="#000000";
+            obj.fill();
+            obj.lineWidth="2";
+            obj.strokeStyle="white";
+            obj.closePath();
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(520,620);
+            obj.lineTo(480,700);
+            obj.lineTo(512,700);
+            obj.lineTo(500,720);
+            obj.lineTo(530,740);
+            obj.quadraticCurveTo(510,640,527,620);
+            obj.fillStyle="black";
+            obj.fill();
+            obj.lineWidth="2";
+            obj.strokeStyle="#FFFFFF";
+            obj.closePath();
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(580,620);
+            obj.lineTo(620,700);
+            obj.lineTo(588,700);
+            obj.lineTo(600,720);
+            obj.lineTo(570,740);
+            obj.quadraticCurveTo(590,640,573,620);
+            obj.fillStyle="black";
+            obj.fill();
+            obj.closePath();
+            obj.stroke();
+           
+            obj.beginPath();
+            obj.arc(495,692,4,0,2*Math.PI);
+            obj.fillStyle="white";
+            obj.fill();
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.arc(605,692,4,0,2*Math.PI);
+            obj.fillStyle="white";
+            obj.fill();
+            obj.stroke();            
+            //상체 그리기
+                       
+            obj.beginPath();            
+            obj.moveTo(400,400);
+            obj.bezierCurveTo(400,200,700,200,700,400);      
+            obj.lineTo(700,400);            
+            obj.lineTo(685,550);
+            obj.bezierCurveTo(660,650,440,650,415,550);         
+            obj.lineTo(415,550);
+            obj.closePath();            
+                        
+            obj.fillStyle="#FEE9E4";
+            obj.lineWidth=5;
+            obj.strokeStyle="black";
+            obj.fill();
+            obj.stroke();
+            //얼굴형태 그리기
+            
+            obj.beginPath();
+            obj.moveTo(480,380);
+            obj.lineTo(521,381);
+            obj.lineTo(527,395);
+            obj.bezierCurveTo(491,384,459,403,457,385);
+            obj.lineTo(480,380);
+            obj.closePath();
+            obj.stroke();           
+            obj.fillStyle="#000000";
+            obj.fill();            
+            //왼쪽 눈썹
+            
+            obj.beginPath();
+            obj.moveTo(622,380);
+            obj.lineTo(581,381);
+            obj.lineTo(575,395);
+            obj.bezierCurveTo(611,384,643,403,645,385);
+            obj.lineTo(622,380);
+            obj.closePath();
+            obj.stroke();            
+            obj.fillStyle="#000000";
+            obj.fill();   
+            //오른쪽 눈썹
+            
+            obj.beginPath();
+            obj.moveTo(553,544);
+            obj.bezierCurveTo(473,558,528,567,551,576);
+            obj.bezierCurveTo(551,576,699,532,553,544);
+            obj.lineTo(553,544);
+            obj.closePath();
+            obj.lineWidth=5; 
+            obj.strokeStyle="black";
+            obj.stroke();
+            obj.fillStyle="#FFFFFF";
+            obj.fill();    
+            //입
+
+            obj.beginPath();
+            obj.moveTo(580,560);
+            obj.lineTo(590,557);
+            obj.lineWidth="2";
+            obj.strokeStyle="black";
+            obj.lineCap="round";
+            obj.closePath();            
+            obj.stroke();            
+            //입 직선모양
+            
+            obj.beginPath();
+            obj.moveTo(452,418);
+            obj.quadraticCurveTo(496,407,525,417);
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(650,418);
+            obj.quadraticCurveTo(606,407,577,417);
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(470,411);
+            obj.quadraticCurveTo(505,410,525,417);
+            obj.stroke();
+                        
+            obj.beginPath();
+            obj.moveTo(632,411);
+            obj.quadraticCurveTo(597,410,577,417);
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(478,418);
+            obj.arcTo(500,400,520,428,25);
+            obj.quadraticCurveTo(520,430,510,439);
+            obj.arcTo(500,455,482,439,25);
+            obj.quadraticCurveTo(470,425,478,418);
+            obj.fillStyle="white";
+            obj.fill();
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(624,418);
+            obj.arcTo(602,400,582,428,25);
+            obj.quadraticCurveTo(582,430,592,439);
+            obj.arcTo(602,455,620,439,25);
+            obj.quadraticCurveTo(632,425,624,418);
+            obj.fillStyle="white";
+            obj.fill();
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(487,441);
+            obj.quadraticCurveTo(464,439,455,436);
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(615,441);
+            obj.quadraticCurveTo(638,439,647,436);
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.arc(495.5,426.5,14,0,2*Math.PI);
+            obj.fillStyle="black";
+            obj.fill();
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.arc(606.5,426.5,14,0,2*Math.PI);
+            obj.fillStyle="black";
+            obj.fill();
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.clearRect(487,420,5,5);
+            obj.fill();
+            obj.stroke();
+                        
+            obj.beginPath();
+            obj.clearRect(611,420,5,5);
+            obj.fill();
+            obj.stroke();                        
+            //눈
+                        
+            obj.beginPath();
+            obj.moveTo(394,443);
+            obj.bezierCurveTo(364,457,362,481,406,507);
+            obj.lineTo(406,507);
+            obj.closePath();
+            obj.fillStyle="#FEE9E4";
+            obj.fill();
+            obj.lineWidth="5";
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.moveTo(705,443);
+            obj.bezierCurveTo(735,457,737,481,693,507);
+            obj.lineTo(693,507);
+            obj.closePath();
+            obj.fillStyle="#FEE9E4";
+            obj.fill();
+            obj.lineWidth="5";
+            obj.strokeStyle="black";
+            obj.stroke();            
+            //양쪽 귀
+                       
+            obj.beginPath();
+            obj.moveTo(406,500);
+            obj.lineTo(411,426);
+            obj.quadraticCurveTo(422,422,424,406);
+            obj.lineTo(434,395);
+            obj.quadraticCurveTo(464,384,465,370);
+            obj.lineTo(481,307);
+            obj.quadraticCurveTo(533,314,541,280);
+            obj.lineTo(560,276);
+            obj.lineTo(607,277);
+            obj.quadraticCurveTo(611,288,618,286);
+            obj.lineTo(650,325);
+            obj.quadraticCurveTo(652,331,656,327);
+            obj.lineTo(684,382);
+            obj.lineTo(693,432);
+            obj.lineTo(693,507);
+            obj.lineTo(698,480);
+            obj.lineTo(707,434);
+            obj.lineTo(710,415);
+            obj.lineTo(711,361);
+            obj.lineTo(711,326);
+            obj.quadraticCurveTo(713,321,699,315);
+            obj.quadraticCurveTo(689,250,624,213);
+            obj.lineTo(615,214);
+            obj.lineTo(599,199);
+            obj.lineTo(539,196);
+            obj.quadraticCurveTo(502,188,474,208);
+            obj.lineTo(443,209);
+            obj.quadraticCurveTo(403,230,401,274);
+            obj.lineTo(404,265);
+            obj.quadraticCurveTo(386,287,388,334);
+            obj.lineTo(389,331);
+            obj.quadraticCurveTo(376,361,389,391);
+            obj.lineTo(406,500);   
+            obj.lineWidth=5;
+            obj.fillStyle="#424242";
+            obj.fill();
+            obj.stroke();            
+            //머리카락
+            
+            obj.beginPath()
+            obj.lineTo(514,497);
+            obj.quadraticCurveTo(460,572,514,573);
+            obj.lineWidth="2";
+            obj.strokeStyle="#424242";
+            obj.stroke();
+            
+            obj.beginPath();
+            obj.lineTo(593,490);
+            obj.quadraticCurveTo(640,526,625,554);
+            obj.lineWidth="2";
+            obj.strokeStyle="#424242"
+            obj.stroke();            
+            //팔자주름
+            
+            obj.beginPath();
+            obj.moveTo(537,440);
+            obj.quadraticCurveTo(543,474,520,489);
+            obj.lineTo(520,510);
+            obj.lineTo(523,513);
+            obj.quadraticCurveTo(536,507,544,518);
+            obj.lineTo(562,518);
+            obj.quadraticCurveTo(565,507,582,510);
+            obj.lineTo(585,506);
+            obj.lineTo(585,488);
+            obj.quadraticCurveTo(560,464,566,440);
+            obj.lineWidth="2";
+            obj.strokeStyle="#424242"
+            obj.stroke();            
+            //코
+            
+            obj.beginPath()
+            obj.moveTo(611,265);
+            obj.quadraticCurveTo(609,226,570,216);
+            obj.quadraticCurveTo(633,214,611,265);
+            obj.lineWidth="2";
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(605,273);
+            obj.quadraticCurveTo(580,229,512,212);
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(511,227);
+            obj.quadraticCurveTo(538,244,539,275);
+            obj.quadraticCurveTo(489,243,428,239);
+            obj.quadraticCurveTo(444,210,472,215);
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(455,264);
+            obj.quadraticCurveTo(479,269,479,302);
+            obj.quadraticCurveTo(415,291,396,326);
+            obj.quadraticCurveTo(391,300,406,283);
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(462,347);
+            obj.quadraticCurveTo(409,346,397,391);            
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(615,275);
+            obj.quadraticCurveTo(656,268,683,320);
+            obj.quadraticCurveTo(671,268,647,254);
+            obj.strokeStyle="black";
+            obj.stroke();
+            
+            obj.beginPath()
+            obj.moveTo(668,325);
+            obj.quadraticCurveTo(686,331,697,378);
+            obj.strokeStyle="black";
+            obj.stroke();            
+            //머리카락 디테일
+            
+            obj.beginPath();
+            obj.moveTo(447,516);
+            obj.quadraticCurveTo(437,521,423,508);
+            obj.quadraticCurveTo(418,498,442,478);
+            obj.quadraticCurveTo(460,496,460,478);
+            obj.quadraticCurveTo(476,467,488,473);
+            obj.quadraticCurveTo(507,475,504,459);
+            obj.quadraticCurveTo(531,469,548,456);
+            obj.quadraticCurveTo(544,474,560,469);
+            obj.quadraticCurveTo(494,494,475,537);
+            obj.quadraticCurveTo(475,520,447,516);
+                       
+            obj.shadowColor = "black";
+            obj.shadowBlur=10;
+            obj.shadowOffsetX=2;
+            obj.shadowOffsetY=2;            
+            obj.closePath();
+            
+            gradient=obj.createLinearGradient(447,516,475,537);
+            gradient.addColorStop(0.00, "#F78181");
+            gradient.addColorStop(0.20, "#FE2E2E");
+            gradient.addColorStop(0.80, "#FF0000");
+            gradient.addColorStop(1.00, "#8A0808");
+            
+            obj.globalAlpha=0.8;
+            obj.fillStyle=gradient;
+            obj.lineWidth=1;
+            obj.strokeStyle="black";
+            obj.fill();
+            obj.stroke(); 
+            //피 분장        
+           
+        </script>
+    
+    </body>
+
+</html>
