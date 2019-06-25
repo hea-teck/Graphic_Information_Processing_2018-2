@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>heateck test</title>
+
+    <style>
+        svg{
+            width:500px;
+            height:500px;
+        }      
+        rect{
+            Stroke-width:5;
+            Stroke:#ccc;
+        }
+        #rect01{
+            stroke:#CCC;
+            stroke-width:5;
+            fill:url(#rGradientSample01);
+            filter:url(#blur);
+        }
+        #shadowRect{
+            fill:rgba(0,0,0,0.7);
+            filter:url(#shadow);
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <svg>
+        
+        <defs>
+            
+            <filter id="blur">
+                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            </filter>
+            
+            <filter id="shadow">
+                <feGaussianBlur stdDeviation="15"></feGaussianBlur>
+                <feOffset dx="20" dy="20"></feOffset>
+            </filter>
+            
+            <radialGradient id="rGradientSample01"  cx="50%" cy="40%" fx="50%" fy="50%" r="30%" spreadMethod="reflect"  gradientTransform="rotate(15)">
+                
+                <stop offset="0%" stop-color="#f00" stop-opacity="1"/>
+                <stop offset="50%" stop-color="#0f0" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#00f" stop-opacity="0.5"/>
+            
+            </radialGradient>
+       
+        </defs>
+        
+        <rect id="shadowRect" x="40" y="20" width="320" height="150" rx="10" ry="10"></rect>
+        
+        <rect id="rect01" x="40" y="20" width="320" height="150" rx="10" ry="10"></rect>
+
+    </svg>
+
+    
+</body>
+
+</html>

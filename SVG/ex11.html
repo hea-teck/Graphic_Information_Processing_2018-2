@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>heateck test</title>
+
+    <style>
+        svg{
+            width:500px;
+            height:500px;
+        }      
+        rect{
+            Stroke-width:5;
+            Stroke:#ccc;
+        }
+        #rect01{
+            fill:url(#lGradientSample01);
+        }
+        #rect02{
+            fill:url(#lGradientSample02);
+        }
+        #rect03{
+            fill:url(#lGradientSample03);
+        }
+        text{
+            font-size:15px;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <svg>
+        
+        <defs>
+            
+            <linearGradient id="lGradientSample01"  x1="0%" y1="0%" x2="0%" y2="50%" spreadMethod="pad"  gradientTransform="rotate(15)">
+                
+                <stop offset="0%" stop-color="#f00" stop-opacity="1"/>
+                <stop offset="50%" stop-color="#0f0" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#00f" stop-opacity="0.5"/>
+            
+            </linearGradient>
+            
+            <linearGradient id="lGradientSample02"  x1="0%" y1="0%" x2="0%" y2="50%" spreadMethod="repeat">
+
+                <stop offset="0%" stop-color="#f00" stop-opacity="1"/>
+                <stop offset="50%" stop-color="#0f0" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#00f" stop-opacity="0.5"/>
+            
+            </linearGradient>
+            
+            <linearGradient id="lGradientSample03" x1="0%" y1="0%"  x2="0%" y2="50%" spreadMethod="reflect">
+            
+                <stop offset="0%" stop-color="#f00" stop-opacity="1"/>
+                <stop offset="50%" stop-color="#0f0" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#00f" stop-opacity="0.5"/>
+            
+            </linearGradient>
+        
+        </defs>
+        
+        <rect id="rect01" x="40" y="20" width="100" height="150" rx="10" ry="10"></rect>
+        <text x="75" y="190">pad</text>
+        
+        <rect id="rect02" x="150" y="20" width="100" height="150" rx="10" ry="10"></rect>
+        <text x="180" y="190">repeat</text>
+        
+        <rect id="rect03" x="260" y="20" width="100" height="150" rx="10" ry="10"></rect>
+        <text x="290" y="190">reflect</text>
+
+    </svg>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+</head>
+    
+    
+<body>
+
+    <svg width="420" height="150">
+        <rect width="40" height="20"></rect>
+        <text x="40" y="15">4 사과</text>
+    
+        <rect width="80" height="20" y="22"></rect>
+        <text x="85" y="38">8 바나나</text>
+        
+        <rect width="150" height="20" y="44"></rect>
+        <text x="155" y="60">15 키위</text>
+        
+        <rect width="160" height="20" y="66"></rect>
+        <text x="165" y="82">16 오렌지</text>
+    </svg>
+    
+    <svg width="500" height="200">
+        <line x1="5" y1="0" x2="5" y2="130" stroke="#000000"
+            stroke-width="0.5"></line>
+        
+        <line x1="0" y1="125" x2="450" y2="125" stroke="#000000"
+            stroke-width="0.5"></line>
+        
+        <polyline
+                  fill="none"  
+                  stroke="#0000FF"
+                  stroke-width="2"
+                  points="10 120 
+                          20, 60
+                          40, 80
+                          60, 20
+                          100,80
+                          
+                          "></polyline>
+        <!--fill="none"코딩이 없으면 라인차트가 아니라 어레이차트형식으로 나온다!!-->
+        <text x="60" y="20">(60,20)</text>
+    </svg>
+    
+    
+    <svg width="400" height="500">
+        <defs>
+        
+            <path id="testP"
+                  d="M300 250
+                     a100 100 0 1 1
+                     -100 -100"/>
+            
+            <path id="testF"
+                  d="M210 140
+                     a100 100 0 0 1
+                     105 105"/>
+                  
+            
+        </defs>
+        
+        <path
+              
+              d="M200 250
+                 h100
+                 a100 100 0 1 1 -100 -100"
+              stroke="#000000"
+              fill="red"
+              ></path>
+        
+        <path
+              d="M210 240,
+                 h100 
+                 a100 100 0 0 0 -100 -100"
+              stroke="#000000"
+              fill="blue"
+              ></path>
+    
+        <text>
+            <textPath xlink:href="#testP">
+            전체 75%
+            </textPath>
+        </text>
+        
+        <text>
+            <textPath xlink:href="#testF">
+            전체 25%
+            </textPath>
+        </text>
+        
+        
+    
+    </svg>
+    
+</body>
+
+
+
+</html>
